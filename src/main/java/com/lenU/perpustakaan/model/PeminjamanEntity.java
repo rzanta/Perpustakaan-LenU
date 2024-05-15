@@ -33,7 +33,7 @@ public class PeminjamanEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "mahasiswa_id")
+    @JoinColumn(name = "mahasiswa_id", referencedColumnName = "nim")
     private MahasiswaEntity mahasiswa;
 
     @ManyToOne

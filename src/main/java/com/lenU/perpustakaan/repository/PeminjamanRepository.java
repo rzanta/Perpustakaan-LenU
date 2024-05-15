@@ -25,4 +25,7 @@ public interface PeminjamanRepository extends JpaRepository<PeminjamanEntity, Lo
 
     long countByMahasiswaNimAndTanggalPeminjamanBetweenAndStatus(String mahasiswaNim, LocalDate startDate,
             LocalDate endDate, PeminjamanEntity.Status status);
+
+    List<PeminjamanEntity> findByTanggalBatasPengembalianBeforeAndStatus(LocalDate date,
+            PeminjamanEntity.Status status);
 }
